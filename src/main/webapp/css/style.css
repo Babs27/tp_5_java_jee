@@ -1,0 +1,294 @@
+/* =========================================================
+   Gestion des cours Supdeco - feuille de style
+   ========================================================= */
+
+:root {
+    --encre:        #0e2338;
+    --encre-douce:  #46617d;
+    --fond:         #eef2f6;
+    --surface:      #ffffff;
+    --trait:        #d6dee7;
+    --ocre:         #b5741a;
+    --ocre-clair:   #fdf3e3;
+    --vert:         #1c6b4a;
+    --vert-clair:   #e6f2ec;
+    --rouge:        #a32626;
+    --rouge-clair:  #fbeaea;
+    --rayon:        6px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 32px 20px 60px;
+    background: var(--fond);
+    color: var(--encre);
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.conteneur {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+/* ---------- En-tete ---------- */
+
+.entete {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--encre);
+    padding-bottom: 14px;
+    margin-bottom: 24px;
+}
+
+.entete .eyebrow {
+    display: block;
+    font-size: 11px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--encre-douce);
+    margin-bottom: 4px;
+}
+
+.entete h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 650;
+    letter-spacing: -.01em;
+}
+
+.compteur {
+    font-size: 13px;
+    color: var(--encre-douce);
+}
+
+/* ---------- Boutons ---------- */
+
+.btn {
+    display: inline-block;
+    padding: 9px 16px;
+    border: 1px solid var(--encre);
+    border-radius: var(--rayon);
+    background: var(--surface);
+    color: var(--encre);
+    font-size: 14px;
+    font-family: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .15s, color .15s;
+}
+
+.btn:hover        { background: var(--encre); color: #fff; }
+.btn:focus-visible{ outline: 3px solid var(--ocre); outline-offset: 2px; }
+
+.btn-primaire     { background: var(--encre); color: #fff; }
+.btn-primaire:hover { background: #1b3b5c; }
+
+.btn-petit        { padding: 5px 11px; font-size: 13px; }
+
+.btn-danger       { border-color: var(--rouge); color: var(--rouge); }
+.btn-danger:hover { background: var(--rouge); color: #fff; }
+
+/* ---------- Messages ---------- */
+
+.message {
+    padding: 11px 14px;
+    border-radius: var(--rayon);
+    border-left: 4px solid;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.message.succes { background: var(--vert-clair); border-color: var(--vert); color: var(--vert); }
+.message.erreur { background: var(--rouge-clair); border-color: var(--rouge); color: var(--rouge); }
+
+.bloc-erreurs {
+    background: var(--rouge-clair);
+    border-left: 4px solid var(--rouge);
+    border-radius: var(--rayon);
+    padding: 12px 16px 12px 32px;
+    margin-bottom: 22px;
+    color: var(--rouge);
+}
+
+.bloc-erreurs li { margin: 3px 0; }
+
+/* ---------- Tableau ---------- */
+
+.carte {
+    background: var(--surface);
+    border: 1px solid var(--trait);
+    border-radius: var(--rayon);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background: #f7f9fb;
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--encre-douce);
+    font-weight: 600;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--trait);
+}
+
+tbody td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #edf1f5;
+    vertical-align: middle;
+}
+
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover         { background: #fafcfe; }
+
+/* Le code du cours : element signature, en chiffres/lettres monospace */
+.code-cours {
+    font-family: "Consolas", "SF Mono", "Courier New", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    color: var(--ocre);
+    background: var(--ocre-clair);
+    border: 1px solid #eddcbf;
+    border-radius: 4px;
+    padding: 3px 7px;
+    white-space: nowrap;
+}
+
+.credits {
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+}
+
+.credits small {
+    font-weight: 400;
+    color: var(--encre-douce);
+    margin-left: 3px;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.vide {
+    padding: 44px 20px;
+    text-align: center;
+    color: var(--encre-douce);
+}
+
+/* ---------- Pagination ---------- */
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin-top: 20px;
+}
+
+.pagination a,
+.pagination span {
+    min-width: 36px;
+    padding: 7px 10px;
+    border: 1px solid var(--trait);
+    border-radius: var(--rayon);
+    background: var(--surface);
+    color: var(--encre);
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.pagination a:hover        { border-color: var(--encre); }
+.pagination .courante      { background: var(--encre); border-color: var(--encre); color: #fff; font-weight: 600; }
+.pagination .desactive     { color: #a9b6c4; background: #f4f7fa; }
+.pagination .info          { border: none; background: none; color: var(--encre-douce); margin-left: auto; font-size: 13px; }
+
+/* ---------- Formulaire ---------- */
+
+.formulaire {
+    background: var(--surface);
+    border: 1px solid var(--trait);
+    border-radius: var(--rayon);
+    padding: 26px;
+}
+
+.champ { margin-bottom: 18px; }
+
+.champ label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.champ .aide {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--encre-douce);
+    margin-top: 4px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--trait);
+    border-radius: var(--rayon);
+    background: #fdfefe;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--encre);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--encre);
+    box-shadow: 0 0 0 3px rgba(14, 35, 56, .1);
+}
+
+.ligne {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.ligne .champ { flex: 1 1 220px; }
+
+.barre-actions {
+    display: flex;
+    gap: 10px;
+    padding-top: 8px;
+    border-top: 1px solid var(--trait);
+    margin-top: 6px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+    body { padding: 20px 12px 40px; }
+    thead { display: none; }
+    tbody td { display: block; border: none; padding: 4px 14px; }
+    tbody tr { display: block; border-bottom: 1px solid var(--trait); padding: 12px 0; }
+    .actions { justify-content: flex-start; padding: 10px 14px 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+}
