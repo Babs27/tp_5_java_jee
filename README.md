@@ -10,7 +10,7 @@ Application web Java respectant le patron **MVC** :
 | Contrôleur | `CoursControleur.java` | servlet unique, actions `liste / nouveau / sauvegarder / modifier / supprimer` |
 | Vues | `liste_cours.jsp`, `formulaire_cours.jsp` , `header.jsp` , `footer.jsp` | affichage HTML + JSTL |
 
-Bonus demandé : **BONUS : Ajoutez une barre de recherche avec filtre côté client (JavaScript)** (constante `CoursService.TAILLE_PAGE`).
+Bonus demandé : **BONUS : Ajoutez une barre de recherche avec filtre côté client (JavaScript)**.
 
 ---
 
@@ -34,6 +34,8 @@ supdeco-cours/
             └── vues/
                 ├── liste_cours.jsp
                 └── formulaire_cours.jsp
+                ├── header.jsp
+                └── footer.jsp
 ```
 
 Les JSP sont dans `WEB-INF/vues/` : elles ne sont accessibles que via le
@@ -44,7 +46,7 @@ dans la barre d'adresse).
 
 ##  lancement sans installer de serveur
 
-Fonctionne avec **Eclipse IDE for Java Developers** tel quel : le support
+Fonctionne avec **Eclipse IDE for Java Developers & Intellij** tel quel : le support
 Maven (m2e) est inclus, et Tomcat est démarré par la classe `Main`.
 
 1. Décompresser `supdeco-cours.zip` quelque part (hors du workspace de préférence).
