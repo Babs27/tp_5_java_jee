@@ -8,7 +8,7 @@ Application web Java respectant le patron **MVC** :
 | DAO | `CoursDAO.java` | stockage **en mémoire** (`LinkedHashMap` statique) |
 | Service | `CoursService.java` | règles de gestion, validation, pagination |
 | Contrôleur | `CoursControleur.java` | servlet unique, actions `liste / nouveau / sauvegarder / modifier / supprimer` |
-| Vues | `liste_cours.jsp`, `formulaire_cours.jsp` | affichage HTML + JSTL |
+| Vues | `liste_cours.jsp`, `formulaire_cours.jsp` , `header.jsp` , `footer.jsp` | affichage HTML + JSTL |
 
 Bonus demandé : **pagination à 5 cours par page** (constante `CoursService.TAILLE_PAGE`).
 
