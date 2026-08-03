@@ -46,7 +46,7 @@ dans la barre d'adresse).
 
 ##  lancement sans installer de serveur
 
-Fonctionne avec **Eclipse IDE for Java Developers & Intellij** tel quel : le support
+Fonctionne avec **Eclipse IDE for Java Developers** tel quel : le support
 Maven (m2e) est inclus, et Tomcat est démarré par la classe `Main`.
 
 1. Décompresser `supdeco-cours.zip` quelque part (hors du workspace de préférence).
