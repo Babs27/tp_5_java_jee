@@ -10,7 +10,7 @@ Application web Java respectant le patron **MVC** :
 | Contrôleur | `CoursControleur.java` | servlet unique, actions `liste / nouveau / sauvegarder / modifier / supprimer` |
 | Vues | `liste_cours.jsp`, `formulaire_cours.jsp` , `header.jsp` , `footer.jsp` | affichage HTML + JSTL |
 
-Bonus demandé : **pagination à 5 cours par page** (constante `CoursService.TAILLE_PAGE`).
+Bonus demandé : **BONUS : Ajoutez une barre de recherche avec filtre côté client (JavaScript)** (constante `CoursService.TAILLE_PAGE`).
 
 ---
 
